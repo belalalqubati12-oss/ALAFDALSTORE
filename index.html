@@ -8,55 +8,61 @@
 <style>
 body{
 margin:0;
-font-family:Tahoma;
+font-family:Arial;
 background:#0b0b0b;
 color:white;
 }
 
-/* HEADER */
+/* الهيدر */
 header{
 background:#000;
 padding:15px;
 text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.5);
+border-bottom:1px solid rgba(255,215,0,0.2);
 }
 
-header img{
-height:80px;
-animation: glow 2s infinite alternate;
+header h1{
+color:gold;
+margin:0;
+font-size:26px;
+letter-spacing:1px;
 }
 
-@keyframes glow{
-0%{filter:drop-shadow(0 0 5px gold)}
-100%{filter:drop-shadow(0 0 25px gold)}
+/* زر السلة */
+.cart{
+position:fixed;
+top:15px;
+left:15px;
+background:gold;
+color:black;
+padding:10px 15px;
+border-radius:12px;
+font-weight:bold;
 }
 
-/* HERO */
+/* القسم الرئيسي */
 .hero{
 text-align:center;
-padding:30px;
-background:linear-gradient(#000,#111);
-}
-
-.hero h1{
-color:gold;
-}
-
-/* PRODUCTS */
-.container{
 padding:20px;
 }
 
+.hero h2{
+color:gold;
+}
+
+/* المنتجات */
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
+padding:20px;
 }
 
 .product{
 background:#1a1a1a;
 border-radius:15px;
 overflow:hidden;
+text-align:center;
 box-shadow:0 0 15px rgba(255,215,0,0.1);
 transition:0.3s;
 }
@@ -71,61 +77,33 @@ height:200px;
 object-fit:cover;
 }
 
-.product-info{
-padding:15px;
-text-align:center;
+.product h3{
+margin:10px 0;
 }
 
 .price{
 color:gold;
-margin:10px 0;
 font-size:18px;
 }
 
 .btn{
 display:inline-block;
+margin:10px;
 background:gold;
 color:black;
 padding:10px 15px;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
-margin-top:10px;
 }
 
-/* CART */
-.cart{
-position:fixed;
-top:15px;
-left:15px;
-background:gold;
-color:black;
-padding:10px;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-font-size:20px;
-}
-
-/* FOOTER */
+/* الفوتر */
 footer{
 background:#000;
 text-align:center;
 padding:15px;
 margin-top:20px;
-color:#aaa;
+color:#ccc;
 }
 </style>
 
@@ -133,41 +111,52 @@ color:#aaa;
 
 <body>
 
+<div class="cart">🛒 (0)</div>
+
 <header>
-<img src="logo.png">
+<h1>الأفضل ستور</h1>
 </header>
 
-<div class="cart">🛒</div>
-
 <div class="hero">
-<h1>مرحباً بكم في الأفضل ستور</h1>
-<p>أفضل المنتجات بأفضل الأسعار</p>
+<h2>أفضل المنتجات بأفضل الأسعار</h2>
 </div>
 
-<div class="container">
 <div class="products">
 
 <div class="product">
 <img src="1.jpg">
-<div class="product-info">
-<h3>بنطال رياضي 1×2</h3>
+<h3>بنطال رياضي 2×1</h3>
 <div class="price">3500 ريال</div>
-<a class="btn" href="https://wa.me/967784440089?text=أريد طلب بنطال 1×2">اطلب الآن</a>
-</div>
+<a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
 </div>
 
 <div class="product">
 <img src="2.jpg">
-<div class="product-info">
 <h3>بنطال رياضي</h3>
-<div class="price">2500 ريال</div>
-<a class="btn" href="https://wa.me/967784440089?text=أريد طلب بنطال">اطلب الآن</a>
-</div>
+<div class="price">2000 ريال</div>
+<a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
 </div>
 
 <div class="product">
 <img src="3.jpg">
-<div class="product-info">
 <h3>بنطال رياضي</h3>
-<div class="price">3000 ريال</div>
-<a class="btn" href="https
+<div class="price">2000 ريال</div>
+<a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
+</div>
+
+<div class="product">
+<img src="4.jpg">
+<h3>جهاز تمارين</h3>
+<div class="price">3500 ريال</div>
+<a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
+</div>
+
+</div>
+
+<footer>
+📞 784440089 <br>
+📍 صنعاء - التحرير - أمام مدرسة جمال عبدالناصر
+</footer>
+
+</body>
+</html>
