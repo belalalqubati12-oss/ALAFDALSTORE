@@ -8,9 +8,19 @@
 <style>
 body{
 margin:0;
-font-family:'Tahoma', sans-serif;
+font-family:Tajawal, Arial;
 background:#0a0a0a;
 color:white;
+}
+
+/* شريط علوي */
+.topbar{
+background:gold;
+color:black;
+text-align:center;
+padding:8px;
+font-size:14px;
+font-weight:bold;
 }
 
 /* الهيدر */
@@ -40,17 +50,16 @@ font-weight:bold;
 /* بانر */
 .hero{
 text-align:center;
-padding:40px 20px;
-background:linear-gradient(to bottom, #000, #111);
+padding:30px 15px;
 }
 
 .hero h1{
 color:gold;
-font-size:28px;
+margin-bottom:10px;
 }
 
 .hero p{
-color:#ccc;
+color:#bbb;
 }
 
 /* المنتجات */
@@ -65,8 +74,8 @@ padding:20px;
 background:#1a1a1a;
 border-radius:15px;
 overflow:hidden;
-transition:0.3s;
 box-shadow:0 0 20px rgba(255,215,0,0.08);
+transition:0.3s;
 }
 
 .product:hover{
@@ -80,13 +89,13 @@ object-fit:cover;
 }
 
 .product h3{
-padding:10px;
-margin:0;
+margin:10px;
 }
 
 .price{
 color:gold;
-padding:0 10px;
+margin:0 10px;
+font-size:18px;
 }
 
 .btn{
@@ -99,6 +108,19 @@ padding:10px;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
+}
+
+/* زر واتساب عائم */
+.whatsapp{
+position:fixed;
+bottom:15px;
+right:15px;
+background:#25D366;
+color:white;
+padding:12px 16px;
+border-radius:50px;
+font-size:18px;
+text-decoration:none;
 }
 
 /* الفوتر */
@@ -115,6 +137,8 @@ margin-top:20px;
 
 <body>
 
+<div class="topbar">🔥 عروض خاصة اليوم 🔥</div>
+
 <header>
 <div class="logo">🛍️ الأفضل ستور</div>
 <div class="cart">🛒 (0)</div>
@@ -129,14 +153,14 @@ margin-top:20px;
 
 <div class="product">
 <img src="1.jpg">
-<h3>بنطال رياضي 2×1</h3>
+<h3>جهاز تمارين</h3>
 <div class="price">3500 ريال</div>
 <a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
 </div>
 
 <div class="product">
 <img src="2.jpg">
-<h3>جهاز  تمارين</h3>
+<h3>بنطال رياضي</h3>
 <div class="price">2000 ريال</div>
 <a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
 </div>
@@ -150,12 +174,14 @@ margin-top:20px;
 
 <div class="product">
 <img src="4.jpg">
-<h3>بنطال رياضي/h3>
-<div class="price">3500 ريال</div>
+<h3>بنطال رياضي</h3>
+<div class="price">2000 ريال</div>
 <a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
 </div>
 
 </section>
+
+<a class="whatsapp" href="https://wa.me/967784440089">💬</a>
 
 <footer>
 📞 784440089 <br>
