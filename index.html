@@ -6,37 +6,32 @@
 <title>الأفضل ستور</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#0a0a0a;color:#fff}
-
-/* HEADER */
-header{background:#000;padding:15px;text-align:center}
-header img{height:80px;animation:glow 2s infinite alternate}
-@keyframes glow{
-0%{filter:drop-shadow(0 0 5px gold)}
-100%{filter:drop-shadow(0 0 20px gold)}
+body{
+margin:0;
+font-family:Arial;
+background:#0a0a0a;
+color:white;
 }
 
-/* PRODUCTS */
-.container{padding:20px}
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px
-}
-
-.product{
-background:#1a1a1a;
-border-radius:15px;
-overflow:hidden;
+/* HEADER + LOGO */
+.header{
 text-align:center;
-padding-bottom:10px
+padding:20px;
+background:#000;
 }
 
-.product img{width:100%;height:180px;object-fit:cover}
+.logo-text{
+font-size:32px;
+font-weight:bold;
+background:linear-gradient(45deg,gold,#fff,gold);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 3s infinite;
+}
 
-.btn{
-background:gold;color:#000;padding:8px 12px;
-border-radius:8px;text-decoration:none;display:inline-block;margin-top:5px
+@keyframes shine{
+0%{background-position:-200px}
+100%{background-position:200px}
 }
 
 /* CART */
@@ -48,20 +43,42 @@ background:gold;
 color:black;
 padding:10px;
 border-radius:10px;
-cursor:pointer;
 }
 
-.cart-box{
-position:fixed;
-top:60px;
-left:10px;
-background:#111;
-padding:15px;
-border-radius:10px;
-display:none;
-width:200px;
+/* PRODUCTS */
+.container{padding:20px}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
 }
 
+.product{
+background:#1a1a1a;
+border-radius:15px;
+overflow:hidden;
+text-align:center;
+padding-bottom:10px;
+}
+
+.product img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.btn{
+background:gold;
+color:black;
+padding:10px;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+/* FOOTER */
 footer{
 background:#000;
 text-align:center;
@@ -70,22 +87,15 @@ margin-top:20px;
 color:#aaa;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-<img src="logo.png">
-</header>
-
-<div class="cart" onclick="toggleCart()">🛒 السلة (<span id="count">0</span>)</div>
-
-<div class="cart-box" id="cartBox">
-<div id="items"></div>
-<br>
-<a class="btn" onclick="order()">اطلب عبر واتساب</a>
+<div class="header">
+<div class="logo-text">الأفضل ستور</div>
 </div>
+
+<div class="cart">🛒 السلة</div>
 
 <div class="container">
 <div class="products">
@@ -93,25 +103,25 @@ color:#aaa;
 <div class="product">
 <img src="1.jpg">
 <h3>بنطال 1×2</h3>
-<a class="btn" onclick="add('بنطال 1×2')">أضف للسلة</a>
+<a class="btn">أضف للسلة</a>
 </div>
 
 <div class="product">
 <img src="2.jpg">
 <h3>بنطال رياضي</h3>
-<a class="btn" onclick="add('بنطال رياضي')">أضف للسلة</a>
+<a class="btn">أضف للسلة</a>
 </div>
 
 <div class="product">
 <img src="3.jpg">
 <h3>بنطال رياضي</h3>
-<a class="btn" onclick="add('بنطال رياضي 2')">أضف للسلة</a>
+<a class="btn">أضف للسلة</a>
 </div>
 
 <div class="product">
 <img src="4.jpg">
 <h3>جهاز تمارين</h3>
-<a class="btn" onclick="add('جهاز تمارين')">أضف للسلة</a>
+<a class="btn">أضف للسلة</a>
 </div>
 
 </div>
@@ -121,30 +131,6 @@ color:#aaa;
 📞 784440089 <br>
 📍 صنعاء - التحرير - أمام مدرسة جمال عبدالناصر
 </footer>
-
-<script>
-let cart=[];
-
-function add(item){
-cart.push(item);
-document.getElementById("count").innerText=cart.length;
-showItems();
-}
-
-function toggleCart(){
-let box=document.getElementById("cartBox");
-box.style.display = box.style.display=="block"?"none":"block";
-}
-
-function showItems(){
-document.getElementById("items").innerHTML=cart.join("<br>");
-}
-
-function order(){
-let text="طلب:\n"+cart.join("\n");
-window.open("https://wa.me/967784440089?text="+encodeURIComponent(text));
-}
-</script>
 
 </body>
 </html>
