@@ -8,46 +8,49 @@
 <style>
 body{
 margin:0;
-font-family:Arial;
-background:#0b0b0b;
+font-family:'Tahoma', sans-serif;
+background:#0a0a0a;
 color:white;
 }
 
 /* الهيدر */
 header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
 background:#000;
-padding:15px;
-text-align:center;
 border-bottom:1px solid rgba(255,215,0,0.2);
 }
 
-header h1{
+.logo{
 color:gold;
-margin:0;
-font-size:26px;
-letter-spacing:1px;
-}
-
-/* زر السلة */
-.cart{
-position:fixed;
-top:15px;
-left:15px;
-background:gold;
-color:black;
-padding:10px 15px;
-border-radius:12px;
+font-size:22px;
 font-weight:bold;
 }
 
-/* القسم الرئيسي */
-.hero{
-text-align:center;
-padding:20px;
+.cart{
+background:gold;
+color:black;
+padding:8px 14px;
+border-radius:10px;
+font-weight:bold;
 }
 
-.hero h2{
+/* بانر */
+.hero{
+text-align:center;
+padding:40px 20px;
+background:linear-gradient(to bottom, #000, #111);
+}
+
+.hero h1{
 color:gold;
+font-size:28px;
+}
+
+.hero p{
+color:#ccc;
 }
 
 /* المنتجات */
@@ -62,13 +65,12 @@ padding:20px;
 background:#1a1a1a;
 border-radius:15px;
 overflow:hidden;
-text-align:center;
-box-shadow:0 0 15px rgba(255,215,0,0.1);
 transition:0.3s;
+box-shadow:0 0 20px rgba(255,215,0,0.08);
 }
 
 .product:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .product img{
@@ -78,20 +80,22 @@ object-fit:cover;
 }
 
 .product h3{
-margin:10px 0;
+padding:10px;
+margin:0;
 }
 
 .price{
 color:gold;
-font-size:18px;
+padding:0 10px;
 }
 
 .btn{
-display:inline-block;
+display:block;
 margin:10px;
+text-align:center;
 background:gold;
 color:black;
-padding:10px 15px;
+padding:10px;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
@@ -102,8 +106,8 @@ footer{
 background:#000;
 text-align:center;
 padding:15px;
+color:#aaa;
 margin-top:20px;
-color:#ccc;
 }
 </style>
 
@@ -111,17 +115,17 @@ color:#ccc;
 
 <body>
 
-<div class="cart">🛒 (0)</div>
-
 <header>
-<h1>الأفضل ستور</h1>
+<div class="logo">🛍️ الأفضل ستور</div>
+<div class="cart">🛒 (0)</div>
 </header>
 
-<div class="hero">
-<h2>أفضل المنتجات بأفضل الأسعار</h2>
-</div>
+<section class="hero">
+<h1>مرحباً بكم في الأفضل ستور</h1>
+<p>أفضل المنتجات بأفضل الأسعار</p>
+</section>
 
-<div class="products">
+<section class="products">
 
 <div class="product">
 <img src="1.jpg">
@@ -132,7 +136,7 @@ color:#ccc;
 
 <div class="product">
 <img src="2.jpg">
-<h3>بنطال رياضي</h3>
+<h3>جهاز  تمارين</h3>
 <div class="price">2000 ريال</div>
 <a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
 </div>
@@ -146,12 +150,12 @@ color:#ccc;
 
 <div class="product">
 <img src="4.jpg">
-<h3>جهاز تمارين</h3>
+<h3>بنطال رياضي/h3>
 <div class="price">3500 ريال</div>
 <a class="btn" href="https://wa.me/967784440089">اطلب الآن</a>
 </div>
 
-</div>
+</section>
 
 <footer>
 📞 784440089 <br>
